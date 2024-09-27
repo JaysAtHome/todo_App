@@ -1,0 +1,142 @@
+/* General App styles */
+.App {
+  height: 100vh;
+  background: url('./Images/web-BG.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.todo-item {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item span {
+  font-size: 1rem;
+  flex-grow: 1;
+  text-align: left;
+  margin-right: 10px; /* Increased spacing between text and buttons */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Buttons inside each Todo item */
+.todo-item button {
+  margin-left: 20px;
+  padding: 7px 10px;
+  background-color: #007bff;
+  transition: background-color 0.3s;
+}
+
+/* Completed Todo: Strikethrough */
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Save button when editing */
+.todo-item input[type="text"] {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 7px;
+  width: 75%;
+  font-size: 1rem;
+}
+
+.todo-app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center content vertically */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 1200px; /* Limit the max width of the container */
+  background-color: rgba(255, 255, 255, 0.9); /* Background with slight transparency */
+}
+
+/* Left side: Input section */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px; 
+  padding: 10px;
+  border-right: 5px solid #000000;
+}
+
+/* Right side: Todo list section */
+.todo-list-container {
+  flex: 1;
+  padding: 20px;
+}
+
+h2 {
+  text-align: left;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.todo-input-container {
+  display: flex; /* Ensure the input and button are in a row */
+  margin-top: 10px; /* Add space between heading and input box */
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+button:disabled {
+  background-color: #ddd;
+}
+
+/* Todo List */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
